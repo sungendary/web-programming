@@ -39,5 +39,17 @@
 ### 2단계: 프로젝트 클론 및 설정
 터미널에서 아래 명령어를 입력하여 프로젝트를 다운로드합니다.
 
-```bash
 git clone [https://github.com/your-username/SEOULINONE.git](https://github.com/your-username/SEOULINONE.git)
+
+### 3단계: API 키 입력 (Client ID 설정)
+
+1. index.html 파일을 열고, <head> 태그 내의 약 6번째 줄에 있는 아래 코드를 찾습니다.
+
+2. ncpClientId= 뒤에 있는 YOUR_CLIENT_ID_HERE 문자열을 발급받은 본인의 Client ID로 정확하게 교체합니다.
+
+
+### 4단계: 실행하기
+
+VS Code에서 index.html 파일을 열고, Open with Live Server를 통해 실행합니다.
+
+주소창이 http://127.0.0.1:5500/... 형태인지 확인하세요.
