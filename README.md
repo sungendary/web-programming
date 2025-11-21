@@ -44,7 +44,8 @@
 
 git clone [https://github.com/your-username/SEOULINONE.git](https://github.com/your-username/SEOULINONE.git)
 
-
+<br>
+<br>
 
 ### 3단계: API 키 입력 (Client ID 설정)
 
@@ -52,7 +53,8 @@ git clone [https://github.com/your-username/SEOULINONE.git](https://github.com/y
 
 2. ncpClientId= 뒤에 있는 YOUR_CLIENT_ID_HERE 문자열을 발급받은 본인의 Client ID로 정확하게 교체합니다.
 
-
+<br>
+<br>
 
 ### 4단계: 실행하기
 
