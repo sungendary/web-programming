@@ -1,41 +1,43 @@
-# web-programming
+# 🐯 SEOULINONE (서울인원)
 
+**SEOULINONE**은 인원 구성(혼자, 연인, 가족, 친구, 단체, 외국인)에 맞춰 서울의 핫플레이스를 추천해주는 웹 서비스입니다.
+사용자 맞춤형 장소 추천과 함께 네이버 지도 API를 활용하여 위치 정보를 직관적으로 제공합니다.
 
-이 프로젝트는 서울의 다양한 장소를 사용자 특성에 따라 추천해주는 반응형 웹사이트입니다.
-아래는 사용된 주요 기술과 코드 내 반영 위치에 대한 설명입니다.
+<br>
 
-───────────────────────────────
-1. CSS3를 사용해 수평 정렬하는 방법
-→ `.place`, `.category`, `.subcategory` 등은 `display: inline-block` 스타일을 통해 버튼들을 수평 정렬합니다.
+## 📸 주요 기능
 
-2. CSS3를 사용해 중앙 정렬하는 방법
-→ `body { text-align: center; }`, `#title-container`, `#video-container`는 `display: flex` 및 `justify-content: center` 등으로 중앙 정렬 처리.
+* **👥 인원별 맞춤 추천**: 방문 인원 및 목적에 따른 최적의 장소 카테고리 제공
+* **🗺️ 지도 위치 확인**: 네이버 지도를 통해 선택한 장소의 위치 및 경로 확인
+* **⭐ 상세 정보 제공**: 장소별 한 줄 소개, 주소, 별점 정보 표시
+* **🎥 소개 영상 연동**: 서울 관광 관련 유튜브 영상 재생 기능
 
-3. CSS3를 사용해 One True 레이아웃을 구성
-→ `#map-wrapper`는 `display: flex`로 구성되어, 지도와 정보 패널이 한 줄에 나란히 배치됩니다.
+<br>
 
-4. CSS3의 절대 좌표를 활용
-→ `.sidebar`는 `position: fixed`로 지정되어 페이지 스크롤과 무관하게 고정 위치에 배치됩니다.
+## 🛠️ 기술 스택 (Tech Stack)
 
-5. 반응형 웹을 구현하는 방법
-→ `@media (max-width: 768px)` 미디어 쿼리를 통해 모바일 환경에 맞는 UI를 별도로 구성했습니다. (ex. 사이드바 숨김)
+* **Frontend**: HTML5, CSS3, JavaScript (Vanilla JS + jQuery)
+* **API**: [Naver Maps API v3](https://www.ncloud.com/product/applicationService/maps) (Geocoding 포함)
 
-6. 자바스크립트, 객체, 문서객체모델(DOM), jQuery 라이브러리, jQuery 플러그인 사용
-→ JS 함수 `showSubcategories`, `showPlaces`, `searchPlaceOnMap` 등은 DOM 조작 기반이며,
-   jQuery는 Slick Carousel 초기화 및 이벤트 처리에 사용됩니다.
-   - jQuery 사용 예: `$(document).ready()`, `$('#title-container').slick()`
+<br>
 
-7. 효과적인 디자인 구성 적용
-→ 버튼에 hover/active 시 shadow, 색상 변경 등으로 사용자의 인터랙션 피드백을 제공합니다.
-→ `box-shadow`, `border-radius` 등의 스타일도 디자인 효과를 고려하여 적용.
+## 🚀 설치 및 실행 방법 (Getting Started)
 
-8. 오디오 및 동영상 활용 가능(option)
-→ `<iframe id="youtube-video" src="...">` 요소로 유튜브 영상을 임베딩하여 멀티미디어 요소를 추가했습니다.
+이 프로젝트는 **네이버 지도 API**를 사용하므로, 실행 전에 **API 키(Client ID) 발급 및 설정**이 필수입니다.
 
-───────────────────────────────
-사용 방법
+### 1단계: 네이버 지도 API 키 발급받기
+1.  [네이버 클라우드 플랫폼](https://www.ncloud.com/)에 접속하여 로그인합니다.
+2.  우측 상단의 **[Console]** 버튼을 클릭하여 콘솔로 이동합니다.
+3.  좌측 메뉴에서 **Services** > **Maps**를 선택합니다.
+4.  **[Application 등록]** 버튼을 클릭합니다.
+5.  **Service 선택** 항목에서 **Web Dynamic Map**을 체크합니다. (필요 시 Geocoding도 체크)
+6.  **서비스 URL** 설정:
+    * **로컬에서 테스트할 경우**: `http://localhost` 또는 `http://127.0.0.1`을 추가합니다. (VS Code의 Live Server 등을 이용할 때 필요)
+    * **웹에 배포할 경우**: 실제 배포될 도메인 주소를 입력합니다.
+7.  등록 완료 후, 해당 앱의 **인증 정보(Client ID)** 값을 복사해 둡니다.
 
-1. 웹 페이지를 열면 유튜브 소개 영상과 카테고리 버튼이 표시됩니다.
-2. 카테고리를 선택하면 관련 서브카테고리 버튼이 동적으로 생성됩니다.
-3. 서브 카테고리를 선택하면 추천 장소 리스트가 버튼 형태로 생성됩니다.
-4. 장소를 클릭하면 지도와 함께 주소, 소개, 경로 등의 정보가 표시됩니다.
+### 2단계: 프로젝트 클론 및 설정
+터미널에서 아래 명령어를 입력하여 프로젝트를 다운로드합니다.
+
+```bash
+git clone [https://github.com/your-username/SEOULINONE.git](https://github.com/your-username/SEOULINONE.git)
